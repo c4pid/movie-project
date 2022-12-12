@@ -8,6 +8,7 @@ import Register from "./pages/auth/Register";
 import Home from "./pages/home";
 import NotFound from "./pages/not-found";
 import AuthRoute from "./routes/auth-route";
+import ContentRoute from "./routes/content-route";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
           <Route path={ROUTES.LOGIN} element={<Login />} />
           <Route path={ROUTES.REGISTER} element={<Register />} />
         </Route>
-        <Route element={<ContentLayout />}>
+        <Route element={<ContentRoute />}>
           <Route path={ROUTES.HOME} element={<Home />} />
         </Route>
       </Routes>

@@ -1,0 +1,17 @@
+@import "~bootstrap/scss/bootstrap";
+
+// Core
+@import "core/variables";
+@import "core/button";
+
+// Components
+@import "components/header";
+@import "components/header";
+
+// Pages
+@import "pages/login";
+
+.auth-layout {
+  height: 100vh;
+  background: black;
+}

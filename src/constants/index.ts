@@ -3,3 +3,5 @@ export const ROUTES = {
   REGISTER: "/auth/register",
   HOME: "/home",
 };
+
+export const ACCESS_TOKEN = "ACCESS_TOKEN";

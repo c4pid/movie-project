@@ -4,7 +4,7 @@ import loginReducer from "./loginReducer";
 
 const rootReducer = combineReducers({
   users: usersReducer,
-  user: loginReducer,
+  userInfo: loginReducer,
 });
 
 export type AppState = ReturnType<typeof rootReducer>;

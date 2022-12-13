@@ -26,6 +26,8 @@ const Login = () => {
         matKhau: password,
       })
     );
+    setAccount("");
+    setPassword("");
     setTimeout(() => {
       navigate(ROUTES.HOME);
     }, 1500);
@@ -46,9 +48,6 @@ const Login = () => {
             type="text"
             placeholder="email or your account"
           />
-          {/* {errors?.email && (
-            <Form.Text className="text-error">{errors?.email}</Form.Text>
-          )} */}
         </FormGroup>
 
         <FormGroup className="mv-auth-input">
@@ -59,9 +58,6 @@ const Login = () => {
             type="password"
             placeholder="password"
           />
-          {/* {errors?.email && (
-            <Form.Text className="text-error">{errors?.email}</Form.Text>
-          )} */}
         </FormGroup>
 
         <Link to={ROUTES.REGISTER} className="mv-sign-up-link">
@@ -69,11 +65,7 @@ const Login = () => {
         </Link>
 
         <div className="text-center">
-          <Button
-            type="submit"
-            // className="w-100"
-            // disabled={loading}
-          >
+          <Button type="submit">
             <span className="mv-auth-text-btn">Login</span>
           </Button>
         </div>

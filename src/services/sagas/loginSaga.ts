@@ -23,9 +23,10 @@ function* fetchLoginSaga(action: any): any {
       history.push(ROUTES.HOME);
     }, 1500);
   } catch (err: any) {
-    toast.error(err.response.data.content, {
+    return toast.error(err.response.data.content, {
       position: "top-right",
       autoClose: 1500,
+      theme: "dark",
     });
   }
 }

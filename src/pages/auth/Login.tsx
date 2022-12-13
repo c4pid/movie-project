@@ -7,16 +7,16 @@ import {
   FormGroup,
 } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import MVLogo from "../../assets/images/logo.png";
 import { ROUTES } from "../../constants";
 import { userLogin } from "../../services/actions/loginAction";
-import { USER_LOGIN_REQUEST } from "../../services/constants";
 
 const Login = () => {
   const dispatch = useDispatch();
   const [account, setAccount] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = (e: any) => {
     e.preventDefault();
@@ -26,6 +26,9 @@ const Login = () => {
         matKhau: password,
       })
     );
+    setTimeout(() => {
+      navigate(ROUTES.HOME);
+    }, 1500);
   };
 
   return (

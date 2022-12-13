@@ -38,11 +38,9 @@ const Register = () => {
             value={phoneNumber}
             onChange={(e) => {
               if (e.target.value && !/[0-9]/.test(e.target.value)) {
-                debugger;
                 e.preventDefault();
               } else {
                 setPhoneNumber(e.target.value);
-                debugger;
               }
             }}
             required

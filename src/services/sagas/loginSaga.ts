@@ -1,17 +1,32 @@
-import { all, call, takeLatest } from "redux-saga/effects";
-import { ENDPOINTS } from "../../constants";
+import { AxiosError, AxiosResponse } from "axios";
+import { useNavigate } from "react-router";
+import { all, call, put, takeLatest } from "redux-saga/effects";
+import { ACCESS_TOKEN, ENDPOINTS, ROUTES } from "../../constants";
+import { userLoginSuccess } from "../actions/loginAction";
 import { USER_LOGIN_REQUEST } from "../constants";
 import { apiCall } from "./api";
+import { createBrowserHistory } from "history";
+import { toast } from "react-toastify";
 
 function* fetchLoginSaga(action: any): any {
+  const history = createBrowserHistory();
   try {
-    const requestData = action.payload;
-    console.log(requestData);
-    debugger;
-    const rest = yield call(apiCall, "POST", ENDPOINTS.LOGIN, action.payload);
-    console.log(rest);
-  } catch (err) {
-    console.log(err);
+    const res: any = yield call(
+      apiCall,
+      "POST",
+      ENDPOINTS.LOGIN,
+      action.payload
+    );
+    yield put(userLoginSuccess(res));
+    localStorage.setItem(ACCESS_TOKEN, res.content.accessToken);
+    setTimeout(() => {
+      history.push(ROUTES.HOME);
+    }, 1500);
+  } catch (err: any) {
+    toast.error(err.response.data.content, {
+      position: "top-right",
+      autoClose: 1500,
+    });
   }
 }
 

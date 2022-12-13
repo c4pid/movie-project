@@ -23,7 +23,7 @@ const instance = (header?: Record<string, string>) => {
       return response;
     },
     async (error) => {
-      console.log(error);
+      return Promise.reject(error);
     }
   );
 
@@ -46,7 +46,6 @@ export const apiCall = (
     config.params = data;
   } else {
     config.data = data;
-    debugger;
   }
 
   return instance(header)(config).then((response: any) => {

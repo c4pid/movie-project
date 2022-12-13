@@ -6,10 +6,14 @@
 
 // Components
 @import "components/header";
-@import "components/header";
+@import "components/footer";
+@import "components/navbar";
 
 // Pages
 @import "pages/login";
+
+// Layouts
+@import "layouts/content-layout";
 
 .auth-layout {
   height: 100vh;

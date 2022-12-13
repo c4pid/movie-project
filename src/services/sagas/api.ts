@@ -50,6 +50,6 @@ export const apiCall = (
   }
 
   return instance(header)(config).then((response: any) => {
-    return response;
+    return response.data;
   });
 };

@@ -14,6 +14,12 @@
         position: absolute;
         right: 4%;
         top: 38%;
+        .mv-nav-user-btn {
+            border-color: white;
+            &::after {
+                display: none;
+            }
+        }
     }
 }
 

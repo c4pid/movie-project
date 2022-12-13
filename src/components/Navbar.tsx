@@ -12,7 +12,7 @@ import logoNetFlix from "../assets/images/Netflix_2015_logo.svg.png";
 
 const Navbar = () => {
     return (
-        <div className="mv-nav-container">
+        <div className="mv-nav-container container">
             <NavBar bg="Dark" expand="lg">
                 <Container fluid>
                     <NavBar.Brand href="/home">
@@ -46,7 +46,7 @@ const Navbar = () => {
             </NavBar>
             <div className="mv-nav-utils-container">
                 <Dropdown className="mv-nav-user">
-                    <Dropdown.Toggle style={{backgroundColor: 'grey', width: '40px', height: '40px', borderRadius: '20px'}}>
+                    <Dropdown.Toggle className="mv-nav-user-btn" style={{backgroundColor: 'grey', width: '40px', height: '40px', borderRadius: '20px'}}>
                         <img src={avatar} style={{width: '15px', height: '15px'}}/>
                     </Dropdown.Toggle>
                     <Dropdown.Menu>

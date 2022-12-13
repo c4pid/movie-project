@@ -14,6 +14,15 @@
         position: absolute;
         right: 4%;
         top: 38%;
+
+        .mv-nav-user-btn {
+            border-color: rgb(198, 182, 182);
+            display: flex;
+            align-items: center;
+            &::after {
+                display: none;
+            }
+        }
     }
 }
 

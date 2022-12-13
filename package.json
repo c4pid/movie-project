@@ -20,11 +20,8 @@
     "react-router": "^6.4.5",
     "react-router-dom": "^6.4.5",
     "react-scripts": "5.0.1",
-<<<<<<< HEAD
     "react-slideshow-image": "^4.1.1",
-=======
     "react-toastify": "^9.1.1",
->>>>>>> origin/main
     "redux": "^4.2.0",
     "redux-saga": "^1.2.2",
     "sass": "^1.56.2",

@@ -10,5 +10,5 @@ export const BASE_URL = "https://movieapi.cyberlearn.vn/api";
 
 export const ENDPOINTS = {
   LOGIN: "/QuanLyNguoiDung/DangNhap",
-  GET_LIST_BANNER: "/QuanLyPhim/LayDanhSachBanner"
+  GET_LIST_BANNER: "/QuanLyPhim/LayDanhSachBanner",
 };

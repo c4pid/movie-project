@@ -14,16 +14,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   // <React.StrictMode>
-<<<<<<< HEAD
-    <Provider store={store}>
-      <App />
-    </Provider>
-=======
   <Provider store={store}>
     <App />
     <ToastContainer />
   </Provider>
->>>>>>> origin/main
   // </React.StrictMode>
 );
 

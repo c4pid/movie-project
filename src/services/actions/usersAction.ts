@@ -14,6 +14,6 @@ export const getListUserSuccess = (payload: any) => ({
   payload,
 });
 
-export const getListUserFailure = (payload: any) => ({
+export const getListUserFailure = () => ({
   type: GET_LIST_USER_FAILURE,
 });

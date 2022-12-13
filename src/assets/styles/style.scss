@@ -9,9 +9,41 @@
 @import "components/header";
 
 // Pages
-@import "pages/login";
+@import "pages/auth";
 
 .auth-layout {
   height: 100vh;
-  background: black;
+  background-image: url(../images/auth-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .mv-auth-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .mv-sign-up-link {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 60px;
+    text-decoration: none;
+    color: $mv-text-sub-color;
+    font-size: 14px;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+
+    &:hover {
+      color: $mv-text-main-color;
+    }
+  }
+}
+
+.form-control {
+  width: 75%;
 }

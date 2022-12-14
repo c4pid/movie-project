@@ -8,7 +8,6 @@ function* fetchListBannerSaga(action: any): any {
   try {
     const res = yield call(apiCall, "GET", ENDPOINTS.GET_LIST_BANNER, action.payload);
     yield put(getListBannerSuccess(res?.content))
-    debugger
   } catch (err) {
     console.log(err);
   }

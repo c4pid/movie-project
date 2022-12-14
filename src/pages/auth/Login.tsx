@@ -10,6 +10,7 @@ import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import MVLogo from "../../assets/images/logo.png";
 import { ROUTES } from "../../constants";
+import { getListBanner } from "../../services/actions/getListMoviesAction";
 import { userLogin } from "../../services/actions/loginAction";
 
 const Login = () => {
@@ -27,6 +28,7 @@ const Login = () => {
       })
     );
     setTimeout(() => {
+      dispatch(getListBanner())
       navigate(ROUTES.HOME);
     }, 1500);
   };

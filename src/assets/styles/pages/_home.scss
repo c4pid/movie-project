@@ -8,18 +8,24 @@
    .mv-home-btn-container {
       position: absolute;
       bottom: 20%;
-      left: 15%;
+      left: 5%;
       z-index: 1;
       .mv-home-btn-book {
-         background-color: white;
+         background-color: #ffffffb7;
          color: $mv-bg-color;
-         width: 130px;
+         font-weight: 600;
+         width: 180px;
          height: 50px;
+         border: 1px solid black;
       }
       .mv-home-btn-info {
-         background-color: white;
-         color: red;
-         width: 70px;
+         background-color: #6f7371b7;
+         color: $mv-text-main-color;
+         width: 180px;
+         height: 50px;
+         font-weight: 600;
+         margin-left: 15px;
+         border: 1px solid white;
       }
    }
 }

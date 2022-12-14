@@ -5,7 +5,8 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { getListBanner } from "../../services/actions/getListMoviesAction";
 import { AppState } from "../../services/reducers";
-
+import {FiPlayCircle} from 'react-icons/fi'
+import {AiOutlineInfoCircle} from 'react-icons/ai'
 const Home = () => {
     const [listData, setListData] = useState([]);
     const dispatch = useDispatch();
@@ -31,8 +32,8 @@ const Home = () => {
                     ))}
                 </Carousel>
                 <div className="mv-home-btn-container">
-                    <Button variant="primary" className="mv-home-btn-book">Book ticket</Button>
-                    <Button variant="primary" className="mv-home-btn-info">More Info</Button>
+                    <Button variant="primary" className="mv-home-btn-book"> <FiPlayCircle size={25} />Book ticket</Button>
+                    <Button variant="primary" className="mv-home-btn-info"> <AiOutlineInfoCircle size={25} /> More Info</Button>
                 </div>
             </div>
             <div className="mv-home-list"></div>

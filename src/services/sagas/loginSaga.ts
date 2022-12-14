@@ -1,12 +1,10 @@
-import { AxiosError, AxiosResponse } from "axios";
-import { useNavigate } from "react-router";
+import { createBrowserHistory } from "history";
 import { all, call, put, takeLatest } from "redux-saga/effects";
 import { ACCESS_TOKEN, ENDPOINTS, ROUTES } from "../../constants";
-import { userLoginSuccess } from "../actions/loginAction";
+import { showErrorMessage } from "../../utils/messageUtils";
+import { userLoginFailure, userLoginSuccess } from "../actions/loginAction";
 import { USER_LOGIN_REQUEST } from "../constants";
 import { apiCall } from "./api";
-import { createBrowserHistory } from "history";
-import { toast } from "react-toastify";
 
 function* fetchLoginSaga(action: any): any {
   const history = createBrowserHistory();
@@ -23,11 +21,8 @@ function* fetchLoginSaga(action: any): any {
       history.push(ROUTES.HOME);
     }, 1500);
   } catch (err: any) {
-    return toast.error(err.response.data.content, {
-      position: "top-right",
-      autoClose: 1500,
-      theme: "dark",
-    });
+    yield put(userLoginFailure());
+    showErrorMessage(err);
   }
 }
 

@@ -1,5 +1,12 @@
+import Navbar from "../components/Navbar";
+
 const ContentLayout = ({ children }: any) => {
-  return <div className="content-layout">{children}</div>;
+    return (
+        <div className="mv-content-layout-container">
+            <Navbar />
+            {children}
+        </div>
+    );
 };
 
 export default ContentLayout;

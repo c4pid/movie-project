@@ -1,0 +1,25 @@
+.mv-nav-container {
+    position: relative;
+    padding-top: 20px;
+    .mv-nav-navLink {
+        color: $mv-text-main-color;
+        font-size: 16px;
+        transition: all 0.2s linear;
+        &:hover {
+            color: $mv-text-main-color;
+            opacity: 0.6;
+        }
+    }
+    .mv-nav-utils-container {
+        position: absolute;
+        right: 4%;
+        top: 38%;
+        .mv-nav-user-btn {
+            border-color: white;
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+

@@ -38,6 +38,7 @@ const Login = () => {
       <div className="mb-5 text-center">
         <img src={MVLogo} alt="mv-logo" className="mv-logo" />
         <h1 className="mv-auth-title">sign in</h1>
+        <h1 className="mv-auth-title">Netflix and chill</h1>
       </div>
       <Form onSubmit={handleLogin}>
         <FormGroup className="mv-auth-input">

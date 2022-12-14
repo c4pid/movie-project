@@ -31,8 +31,8 @@ const Home = () => {
                     ))}
                 </Carousel>
                 <div className="mv-home-btn-container">
-                    <Button variant="primary">Book ticket</Button>
-                    <Button variant="primary">More Info</Button>
+                    <Button variant="primary" className="mv-home-btn-book">Book ticket</Button>
+                    <Button variant="primary" className="mv-home-btn-info">More Info</Button>
                 </div>
             </div>
             <div className="mv-home-list"></div>

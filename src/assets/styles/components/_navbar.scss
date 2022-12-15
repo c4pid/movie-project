@@ -1,7 +1,13 @@
 .mv-nav-container {
-    position: relative;
+    position: fixed;
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
+    top: 0;
+    z-index: 1;
     padding-top: 10px;
     padding-bottom: 10px;
+    background-color: black;
     .mv-nav-navLink {
         color: $mv-text-main-color;
         font-size: 16px;

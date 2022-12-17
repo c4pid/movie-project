@@ -1,12 +1,11 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Carousel } from "react-bootstrap";
+import { AiOutlineInfoCircle } from "react-icons/ai";
+import { FiPlayCircle } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
-import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { getListBanner } from "../../services/actions/getListMoviesAction";
 import { AppState } from "../../services/reducers";
-import { FiPlayCircle } from "react-icons/fi";
-import { AiOutlineInfoCircle } from "react-icons/ai";
 const Home = () => {
   const [listData, setListData] = useState([]);
   const dispatch = useDispatch();

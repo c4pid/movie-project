@@ -12,4 +12,5 @@ export const ENDPOINTS = {
   LOGIN: "/QuanLyNguoiDung/DangNhap",
   REGISTER: "/QuanLyNguoiDung/DangKy",
   GET_LIST_BANNER: "/QuanLyPhim/LayDanhSachBanner",
+  GET_LIST_MOVIES: "/QuanLyPhim/LayDanhSachPhimPhanTrang",
 };

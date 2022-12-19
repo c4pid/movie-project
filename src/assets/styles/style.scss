@@ -15,7 +15,9 @@
 
 // Layouts
 @import "layouts/content-layout";
-
+html {
+  background-color: black;
+}
 .auth-layout {
   height: 100vh;
   background-image: url(../images/auth-background.jpg);

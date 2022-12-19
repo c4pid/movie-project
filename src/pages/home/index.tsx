@@ -6,7 +6,7 @@ import { getListBanner, getListMovies } from "../../services/actions/getListMovi
 import { AppState } from "../../services/reducers";
 import { FiPlayCircle } from "react-icons/fi";
 import { AiOutlineInfoCircle } from "react-icons/ai";
-import Moment from "react-moment";
+// import Moment from "react-moment";
 import MovieDetail from "./MovieDetail";
 import logoNetFlix from "../../assets/images/Netflix_2015_logo.svg.png";
 
@@ -116,7 +116,7 @@ const Home = () => {
                                 <p className="name-movie">{item.tenPhim}</p>
                                 <p className="comming">
                                     Ngày khởi chiếu:{" "}
-                                    <Moment format="YYYY/MM/DD">{item.ngayKhoiChieu}</Moment>
+                                    {/* <Moment format="YYYY/MM/DD">{item.ngayKhoiChieu}</Moment> */}
                                 </p>
                                 {/* <p className="rating">RATING: {item.danhGia}</p> */}
                             </div>
